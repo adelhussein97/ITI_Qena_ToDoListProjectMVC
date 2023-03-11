@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
+// Dependancy Injection Connection String
 builder.Services.AddDbContext<ToDoListContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ToDoListConnectionString"));
